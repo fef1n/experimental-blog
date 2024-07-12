@@ -1,0 +1,11 @@
+<%- include("partials/header.ejs") %>
+<form action="/submit" method="post">                
+    <input type="hidden" name="title" value="<%=pTitle%>">
+    <input type="hidden" name="author" value="<%=pAuthor%>">
+    <label for="content">Update your post's content:</label> <br>         
+    <textarea name="content" maxlength="1000" rows="10" cols="100" required></textarea>  <br>   
+    <input type="submit" value="submit"> <br>            
+</form>
+
+
+<%- include("partials/footer.ejs") %>

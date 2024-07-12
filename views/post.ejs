@@ -1,0 +1,20 @@
+<%- include("partials/header.ejs") %>
+
+<section id="post-section">
+    <%- include(pFilePath) %>
+
+    <div class="post-buttons">
+        <form action="/update" method="post">
+            <input type="hidden" name="index" value="<%=pIndex%>">
+            <input type="submit" value="Update"> <br>
+        </form>
+        
+        <form action="/delete" method="post">
+            <input type="hidden" name="index" value="<%=pIndex%>">
+            <input type="submit" value="Delete"> <br>
+        </form>
+    </div>
+</section>
+
+
+<%- include("partials/footer.ejs") %>
